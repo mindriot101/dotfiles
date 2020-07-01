@@ -1,5 +1,8 @@
 ---
 - hosts: all
-  tasks:
-    - name: Ping the system
-      ping:
+  roles:
+    - role: common
+    - role: macos
+      when: ansible_facts["os_family"] == "Darwin"
+    - role: linux
+      when: ansible_facts["os_family"] != "Darwin"

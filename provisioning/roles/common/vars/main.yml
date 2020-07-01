@@ -1,0 +1,19 @@
+standard_dirs:
+  - vim
+  - zsh
+  - tmux
+  - bin
+  - conda
+  - emacs.d
+  - fish
+  - git
+  - hammerspoon
+  - i3
+  - ipython
+  - jupyter
+  - mutt
+  - pgcli
+  - postgresql
+  - xinitrc
+  - xresources
+  - xmodmap

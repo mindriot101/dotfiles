@@ -1,0 +1,8 @@
+---
+- name: Copy the standard directories
+  file:
+    src: "{{ ansible_facts['user_dir'] }}/dotfiles/{{ item }}/{{ item }}"
+    dest: "{{ ansible_facts['user_dir'] }}/.{{ item }}"
+    state: link
+    owner: "{{ ansible_facts['user_id'] }}"
+  with_items: "{{ standard_dirs }}"
